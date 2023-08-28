@@ -1,0 +1,15 @@
+﻿<Window x:Class="PROG6222POE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG6222POE"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <Label x:Name="label" Content="Time Management System" HorizontalAlignment="Left" Margin="287,27,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" FontSize="16"/>
+        <Label x:Name="label1" Content="Username" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.669,-0.513"/>
+        <Button x:Name="button" Content="Add Modules" HorizontalAlignment="Left" Margin="515,280,0,0" VerticalAlignment="Top" Click="button_Click"/>
+
+    </Grid>
+</Window>
