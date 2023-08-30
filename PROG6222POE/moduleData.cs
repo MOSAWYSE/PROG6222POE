@@ -22,16 +22,18 @@ namespace PROG6222POE
         {
             Module module = new Module();
 
-             moduleCode = module.textBox.Text;//program code
+             moduleCode = module.modulecode.Text;//program code
                 setModuleCode(moduleCode);
 
-             moduleName = module.textBox1.Text;//module name 
+             moduleName = module.modulename.Text;//module name 
                 setModuleName(moduleName);
+           // string credit = module.textBox2.Text.ToString();
 
-            moduleCredit = Convert.ToInt32(module.textBox2.Text);//module number of credits
+            moduleCredit += int.Parse(module.modulecredits.Text.ToString());//module number of credits
                 setModuleCredit(moduleCredit);
 
-            classHours = Convert.ToInt32(module.textBox3.Text);//module class hours per week
+            string hour = module.modulehours.Text.ToString();
+            classHours += int.Parse(hour);//module class hours per week
                 setClassHours(classHours);
 
             //ADD THE COLLECTED TO THE LIST

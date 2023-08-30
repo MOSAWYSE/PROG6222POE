@@ -24,9 +24,20 @@ namespace PROG6222POE
             InitializeComponent();
         }
 
+        //add module button 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            Module module = new Module();
+            moduleData moduleInfo = new moduleData();
+            Semester semester = new Semester();
 
+           moduleInfo.saveModule();
+            semester.Show();
+            module.Close();
         }
+
+        //add semester data
+
+
     }
 }
