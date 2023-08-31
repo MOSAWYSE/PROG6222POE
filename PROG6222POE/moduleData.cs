@@ -25,16 +25,30 @@ namespace PROG6222POE
              moduleCode = module.modulecode.Text;//program code
                 setModuleCode(moduleCode);
 
-             moduleName = module.modulename.Text;//module name 
-                setModuleName(moduleName);
-           // string credit = module.textBox2.Text.ToString();
+             //moduleName = module.modulename.Text;//module name 
+               // setModuleName(moduleName);
+            // string credit = module.textBox2.Text.ToString();
 
-            moduleCredit += int.Parse(module.modulecredits.Text.ToString());//module number of credits
+            int credit = 0;
+            if (int.TryParse(module.modulecredits.Text, out credit))
+            {
+                moduleCredit += credit; // module number of credits
                 setModuleCredit(moduleCredit);
+            }
 
-            string hour = module.modulehours.Text.ToString();
-            classHours += int.Parse(hour);//module class hours per week
+            //moduleCredit += int.Parse(module.modulecredits.Text.ToString());//module number of credits//FIX THIS IT IS RECOGNISED AS A STRING
+              //  setModuleCredit(moduleCredit);
+
+//            string hour = module.modulehours.Text.ToString();//FIX THIS TO BE AN INTEGER
+  //          classHours += int.Parse(hour);//module class hours per week
+             //   setClassHours(classHours);
+
+            int hour = 0;
+            if(int.TryParse(module.modulehours.Text, out hour)) 
+            {
+                classHours += hour;
                 setClassHours(classHours);
+            }
 
             //ADD THE COLLECTED TO THE LIST
             moduleCodes.Add(getModuleCode());//adding the module code to the list

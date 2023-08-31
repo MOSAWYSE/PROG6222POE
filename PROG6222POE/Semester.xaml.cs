@@ -30,8 +30,16 @@ namespace PROG6222POE
         {
             semesterData semester = new semesterData();
 
-            int weeks = Convert.ToInt32(semesterWeeks.Text);//this will get the semester weeks captured on the form
-                semester.setSemesterWeeks(weeks);
+           
+
+            int weeks = 0;
+            if (int.TryParse(semesterWeeks.Text, out weeks))
+            {
+              
+                semester.setSemesterWeeks(weeks);//semester number of weeks
+            }
+
+
             string chosenDay = startDate.Text;
                 semester.setSemesterOpening(chosenDay);
 
